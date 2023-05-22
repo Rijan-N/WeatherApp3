@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("img/RijanNeupane_2330765bg1.jpg");
+  min-height: 92vh;
+  overflow: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header h4 {
+  color: #da1e4e;
+  font-weight: 700;
+  font-size: 2.4rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.app-main {
+  min-height: 10vh;
+  width: 30vw;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 15px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.app-main > * {
+  margin-bottom: 20px;
+}
+
+.searchInputBox {
+  margin-bottom: 20px;
+}
+
+#input-box {
+  width: 100%;
+  background: azure;
+  color: #e4603a;
+  font-weight: 500;
+  border: none;
+  font-size: 1.7rem;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+}
+
+.history-btn {
+  background-color: #e4603a;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 110px;
+  float: right;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+}
+
+.history-btn:hover {
+  background-color: #da1e4e;
+}
+
+#weather-body {
+  color: #fff;
+  padding: 20px;
+  line-height: 2rem;
+  border-radius: 10px;
+  background-color: #eff1f3;
+  display: none;
+  background: linear-gradient(to top, #da1e4e, #e4603a);
+}
+
+.location-deatils {
+  font-weight: bold;
+}
+
+.weather-status {
+  padding: 20px;
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 20px 0px;
+  text-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weather {
+  margin-top: 25px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.min-max {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.day_details {
+  padding: 20px;
+}
+
+.sun-detail,
+.basic {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.basic p {
+  font-weight: 500;
+  color: #da1e4e;
+}
+
+.wind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.wind span {
+  margin-right: 10px;
+}
+
+.humidity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+.humidity span {
+  margin-right: 10px;
+}
+
+.weather-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #000;
+}
+
+.weather-table th,
+.weather-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #000;
+}
+
+.weather-table th {
+  background-color: #f2f2f2;
+}
+
+.weather-table tr:hover {
+  background-color: #eaeaea;
+}
+
+.weather-table th:first-child,
+.weather-table td:first-child {
+  border-left: 1px solid #000;
+}
+
+.weather-table th:last-child,
+.weather-table td:last-child {
+  border-right: 1px solid #000;
+}
+
+.weather-table tr:first-child th,
+.weather-table tr:last-child td {
+  border-bottom: 1px solid #000;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .app-main {
+    width: 90vw;
+  }
+}
+
+/* Styles for screens between 600px and 1200px */
+@media (min-width: 600px) and (max-width: 1200px) {
+  .app-main {
+    width: 60vw;
+  }
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+  .app-main {
+    width: 30vw;
+  }
+}
+
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .app-main {
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .history-btn {
+    margin-bottom: 3%;
+  }
+
+  .weather {
+    font-size: 1.8rem;
+    margin-top: 2%;
+  }
+
+  .min-max {
+    font-size: 1.2rem;
+    margin-top: 1.5%;
+  }
+
+  .wind,
+  .humidity {
+    font-size: 1.2rem;
+    margin-top: 1.5%;
+  }
+}
+
+/* Laptops and Desktops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .app-main {
+    width: 50%;
+    margin: 50px auto;
+  }
+
+  .history-btn {
+    margin-bottom: 2%;
+  }
+
+  .weather {
+    font-size: 2rem;
+    margin-top: 1.5%;
+  }
+
+  .min-max {
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
+
+  .wind,
+  .humidity {
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
+}
+
+/* iPads */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .app-main {
+    width: 60%;
+    margin: 50px auto;
+  }
+
+  .history-btn {
+    margin-bottom: 2%;
+  }
+
+  .weather {
+    font-size: 2rem;
+    margin-top: 1.5%;
+  }
+
+  .min-max {
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
+
+  .wind,
+  .humidity {
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
+}
