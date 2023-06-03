@@ -4,10 +4,10 @@
 date_default_timezone_set('Asia/Kathmandu');
 
 // Create a connection to the MySQL database
-$servername = "sql209.epizy.com";
-$username = "epiz_34167501";
-$password = "vouzm8YwZWroW";
-$dbname = "epiz_34167501_weathers";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "weathers";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
