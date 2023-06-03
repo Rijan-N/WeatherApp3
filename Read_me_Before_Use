@@ -1,0 +1,62 @@
+# Weather App
+
+This is a weather application that provides weather information for "South Gloucestershire" by default, but also allows users to search for weather
+information in other cities. The application stores weather data for South Gloucestershire for the past 7 days, saving it to both local storage and
+a database.
+
+## Installation
+
+To use the Weather App, follow these steps:
+
+1. Clone the repository or download the source code.
+2. Ensure you have a web server installed (e.g., Apache, Nginx).
+3. Copy the project files to the web server's document root directory.
+4. Open the `index2.php` file and update it with all the required codes (as mentioned in the instructions).
+5. Delete the `insert_weather_data.php` and `update_weather.php` files, as they are no longer needed.
+6. Delete the `script1.js` file if it is present.
+7. Set up a database (e.g., MySQL) and create a table to store the weather data. Use the following SQL code to create the table:
+
+   ```sql
+   ------------------------------------------------------------------------
+   CREATE TABLE `weatherstable` (
+     `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
+     `description` VARCHAR(255) NOT NULL,
+     `temperature` DECIMAL(5, 2) NOT NULL,
+     `wind` DECIMAL(5, 2) NOT NULL,
+     `city` VARCHAR(255) NOT NULL,
+     `humidity` INT(3) NOT NULL,
+     `icon` VARCHAR(50) NOT NULL,
+     `dt` DATETIME NOT NULL
+   );
+   
+   ------------------------------------------------------------------------
+   ```
+
+   This code creates a table named `weatherstable` with the necessary columns to store the weather data.
+
+8. Update the necessary database configuration in the code to connect to your database.
+9. Access the app through your web browser by visiting the appropriate URL (e.g., `http://localhost/weather-app`).
+
+## Usage
+
+The Weather App displays the weather information for South Gloucestershire by default. To search for weather information in other cities, follow these steps:
+
+1. Enter the name of the desired city in the search bar.
+2. Press the Enter key or click the search button.
+3. The app will retrieve and display the current weather information for the specified city.
+4. The weather data will be saved to both local storage and the database for future reference.
+
+The app also provides offline mode functionality, which allows you to access previously fetched weather data when you are offline.
+To use the offline mode, ensure you have fetched the weather data within the past hour while being online.
+
+## Support
+
+If you encounter any issues or have any questions, please feel free to contact the app developer at neupanerijan0@gmail.com 
+
+## Demo
+
+To see a live demo of the Weather App, visit [rijanswebapp.infinityfreeapp.com](http://rijanswebapp.infinityfreeapp.com)
+
+## License
+
+The Weather App is open source software licensed under the [MIT License](LICENSE).
