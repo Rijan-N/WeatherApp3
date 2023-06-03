@@ -145,6 +145,14 @@ if ($response !== false) {
     echo "API request to OpenWeatherMap failed.";
 }
 
+// Delete weather data older than 7 days
+$deleteQuery = "DELETE FROM weatherstable WHERE dt < DATE_SUB(NOW(), INTERVAL 7 DAY)";
+if ($conn->query($deleteQuery) === TRUE) {
+    echo "Weather data older than 7 days has been deleted.";
+} else {
+    echo "Error deleting weather data: " . $conn->error;
+}
+
 // SQL query to fetch data from the table
 $sql = "SELECT `description`, `temperature`, `wind`, `city`, `humidity`, `icon`, `dt` FROM `weatherstable`";
 
